@@ -51,10 +51,11 @@ body {
     height: 5.25 px;
     border: 10px;
     border-radius: 100%;
-    transform: skewY(5deg);
     overflow: hidden;
     margin: 0 auto;
     display: block;
+    filter: 
+    drop-shadow(3px 2px black);
 }
 img {
 
