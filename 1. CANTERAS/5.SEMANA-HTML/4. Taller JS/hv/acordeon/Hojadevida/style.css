@@ -78,6 +78,9 @@ nav ul li a{
 nav ul li.right{
     float: right;
 }
+#h2nombre{
+    padding-left: 10px;
+}
 .contenedor {
     font-size:1em;
     background-color: #ffffff;
