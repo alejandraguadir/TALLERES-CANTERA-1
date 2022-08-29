@@ -25,7 +25,7 @@ h2.forEach( ( cadaH2 , i )=>{
     })
 })
 
-
+//Función para cambiar el color de fondo de la pagina
 function colorChanger() {
     var selectValue = document.getElementById("mySelection").value;
     document.getElementById;//("dummy").innerHTML="You selected: "+selectValue;
