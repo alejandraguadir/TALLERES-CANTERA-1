@@ -1,0 +1,66 @@
+//La Secretaría de Salud Municipal requiere de una aplicación que le permita calcular el IMC (Índice de masa corporal) y requiere los datos peso en kilogramos y estatura en 
+//metros Para cada persona encuestada adicional a los datos suministrados, debe mostrar el resultado para cada uno y establecer en qué rango se encuentra (bajo peso, normal, 
+//sobrepeso y obeso).
+SubProceso imc <- estadoimc(peso, estatura)
+	Definir imc Como real;
+	imc<- (peso / (estatura*estatura));
+FinSubProceso
+SubProceso imc<-capturardatos1(peso)
+	Definir imc Como real;
+	Escribir "Digite su ", peso, " En Kg." Sin Saltar;
+	Leer imc;
+FinSubProceso
+SubProceso imc<-capturardatos2(estatura)
+	Definir imc Como real;
+		Escribir "Digite su ", estatura, " En Mts." Sin Saltar;
+	Leer imc;
+	
+FinSubProceso
+subproceso respuesta_nombre <- capturar_nombre(nombre)
+	Definir respuesta_nombre Como caracter;
+	Escribir "Digite su nombre completo: " sin saltar;
+	Leer respuesta_nombre;
+	Limpiar Pantalla;
+	Escribir "--------------------Índice de masa corporal-------------------------";
+	Escribir  "---------------------------------------------------------------------";
+	Escribir respuesta_nombre, ", ingrese los siguiente datos para identificar el estado de IMC.";
+	Escribir "";
+FinSubProceso
+
+
+Proceso miFuncionIMC
+	Definir variable1 Como Real;
+	Definir variable2 Como Real;
+	Definir variable3 como Real;
+	Definir nombre Como Caracter;
+
+	Escribir "--------------------Índice de masa corporal-------------------------";
+	Escribir  "---------------------------------------------------------------------";
+	nombre<-capturar_nombre("");
+	variable1<-capturardatos1("peso");
+	Variable2<-capturardatos2("estatura");
+	Variable3<-estadoimc(variable1, Variable2);
+	
+	si Variable3 < 18.5 Entonces
+		Escribir "Se encuentra en bajo peso";
+		
+	FinSi
+	si Variable3>= 18.5 & Variable3<25  Entonces
+		Escribir "Se encuentra en peso normal.";
+	FinSi
+	Si Variable3>= 25 & Variable3<30  Entonces
+		Escribir "Se encuentra en sobrepeso. ";
+	FinSi
+	Si Variable3>= 30 & Variable3<35  Entonces
+		Escribir "Se encuentra en obseidad tipo I. ";
+	FinSi
+	Si Variable3>= 35 & Variable3<40 Entonces
+		Escribir "Se encuentra en obseidad tipo II.";
+	FinSi
+	Si Variable3>= 40 Entonces
+		Escribir "Se encuentra en obseidad tipo III. ";
+	FinSi
+	Escribir  "---------------------------------------------------------------------";
+	
+	
+FinProceso

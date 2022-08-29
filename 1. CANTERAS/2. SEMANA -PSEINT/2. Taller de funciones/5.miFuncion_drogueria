@@ -1,0 +1,234 @@
+//La Droguería Mi Salud presta sus servicios en la localidad de Suba y requiere una aplicación para poder facturar los productos que vende a sus clientes y para ello, 
+//los productos tienen unas características que deben indicársele al cliente para que pueda escoger el producto a comprar. Para cada cliente, se tienen las opciones de compra de 
+//producto, consulta de precios por producto y devoluciones en caso de que se presenten.
+SubProceso encabezado<- encabezadod(encabezadodrogueria)
+	Definir encabezado  Como Caracter;
+	Escribir "----------------------------------------------------------------------";
+	Escribir "-------------------------Droguería mi Salud---------------------------  ";
+	Escribir "----------------------------------------------------------------------";
+FinsubProceso
+
+SubProceso menu<- escribirMenu(menuDrogueria)
+	Definir menu Como Caracter;
+	Escribir " ";
+	Escribir " Elije una opción:";
+	Escribir"1. Ver productos disponibles.";
+	Escribir"2. Compra de productos.";
+	Escribir"3. Devolución de productos.";
+	
+FinSubProceso
+
+SubProceso productos <- valoresproductos(valores)
+	Definir productos Como Caracter;
+	Escribir "Se describe el código, nombre y valor ($) del producto. ";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Cosmeticos";
+	Escribir "1. Crema corporal Valor en $ = 11000.5";
+	Escribir "2. jabonValor en $ = 2550.5";
+	Escribir "3. Perfume sys Valor en $ = 20500.5";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Producto ortopedicos";
+	Escribir "4. Coderas Valor en $ = 60000";
+	Escribir "5. Faja dorso Valor en $ = 79000";
+	Escribir "6. Rodilleras Valor en $ = 40000";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "productos desinfectantes";
+	Escribir "7. Tintura de yodoValor en $ = 4555.9";
+	Escribir "8. Agua oxigenadaValor en $ = 2500";
+	Escribir "9. Alcohol etilicoValor en $ = 5000";
+	
+	Escribir "------------------¡Gracias por usar nuestros servicios!---------------";
+FinSubProceso
+
+SubProceso comprarproducto <- comprar_productos(valores_productos)
+	Definir productos Como entero;
+	Definir cantidad Como Entero;
+	Escribir "Digita el codigo del producto requerido ";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Cosmeticos";
+	Escribir "1. Crema corporal Valor en $ = 11000.5";
+	Escribir "2. jabonValor en $ = 2550.5";
+	Escribir "3. Perfume sys Valor en $ = 20500.5";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Producto ortopedicos";
+	Escribir "4. Coderas Valor en $ = 60000";
+	Escribir "5. Faja dorso Valor en $ = 79000";
+	Escribir "6. Rodilleras Valor en $ = 40000";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "productos desinfectantes";
+	Escribir "7. Tintura de yodoValor en $ = 4555.9";
+	Escribir "8. Agua oxigenadaValor en $ = 2500";
+	Escribir "9. Alcohol etilicoValor en $ = 5000";
+	leer productos;
+	si productos == 1 entonces
+		productos<- 11000.5;
+	FinSi
+	si productos == 2 entonces
+		productos<- 2550.5;
+	FinSi
+	si productos == 3 entonces
+		productos<- 20500.5;
+	FinSi
+	si productos == 4 entonces
+		productos<- 600000;
+	FinSi
+	si productos == 5 entonces
+		productos<- 79000;
+	FinSi
+	si productos == 6 entonces
+		productos<- 40000;
+	FinSi
+	si productos == 7 entonces
+		productos<- 4555.9;
+	FinSi
+	si productos == 8 entonces
+		productos<- 2500;
+	FinSi
+	si productos == 9 entonces
+		productos<- 5000;
+	FinSi 
+	
+	Escribir "Ingrese la cantidad de productos requeridos" Sin Saltar;
+	leer cantidad;
+	Escribir " ";
+	Escribir "El valor que debes pagar es: ", cantidad*productos , "$";
+	Escribir "";
+	
+	
+	Escribir "------------------¡Gracias por usar nuestros servicios!---------------";
+FinSubProceso
+
+SubProceso devolver_producto <- devolverprod(products)
+	Definir devolver_productos Como caracter;
+	Definir productos Como entero;
+	Definir cantidad Como Entero;
+	Escribir "Digita el codigo del producto que requieres devolver";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Cosmeticos";
+	Escribir "1. Crema corporal Valor en $ = 11000.5";
+	Escribir "2. jabonValor en $ = 2550.5";
+	Escribir "3. Perfume sys Valor en $ = 20500.5";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "Producto ortopedicos";
+	Escribir "4. Coderas Valor en $ = 60000";
+	Escribir "5. Faja dorso Valor en $ = 79000";
+	Escribir "6. Rodilleras Valor en $ = 40000";
+	Escribir "---------------------------------------------------------------------";
+	Escribir " ";
+	Escribir "productos desinfectantes";
+	Escribir "7. Tintura de yodoValor en $ = 4555.9";
+	Escribir "8. Agua oxigenadaValor en $ = 2500";
+	Escribir "9. Alcohol etilicoValor en $ = 5000";
+	leer productos;
+	si productos == 1 entonces
+		productos<- 11000.5;
+	FinSi
+	si productos == 2 entonces
+		productos<- 2550.5;
+	FinSi
+	si productos == 3 entonces
+		productos<- 20500.5;
+	FinSi
+	si productos == 4 entonces
+		productos<- 600000;
+	FinSi
+	si productos == 5 entonces
+		productos<- 79000;
+	FinSi
+	si productos == 6 entonces
+		productos<- 40000;
+	FinSi
+	si productos == 7 entonces
+		productos<- 4555.9;
+	FinSi
+	si productos == 8 entonces
+		productos<- 2500;
+	FinSi
+	si productos == 9 entonces
+		productos<- 5000;
+	FinSi 
+	
+	Escribir "Describe el motivo de la devolución del producto";
+	Leer devolver_productos;
+	Escribir "Ingrese la cantidad de productos que fueron adquiridos" Sin Saltar;
+	leer cantidad;
+	Escribir " ";
+	Escribir "El valor a reintegrar es: ", cantidad*productos , "$";
+	Escribir "";
+	
+	
+	
+	Escribir "------------------¡Gracias por usar nuestros servicios!---------------";
+FinSubProceso
+
+
+subproceso respuesta_nombre <- capturar_nombre(nombre)
+	Definir respuesta_nombre Como caracter;
+	Escribir "Digite su ", nombre , sin saltar;
+	Leer respuesta_nombre;
+FinSubProceso
+subproceso respuesta_apellido <- capturar_apellido(apellido)
+	Definir respuesta_apellido Como caracter;
+	Escribir "Digite sus ", apellido,  sin saltar;
+	Leer respuesta_apellido;
+FinSubProceso
+
+
+
+Proceso Drogueria
+	Definir menu Como Caracter;
+	Definir encabezado Como Caracter;
+	Definir opcion como entero;
+	Definir productos_disponibles como caracter;
+	Definir venta_productos Como Entero;
+	Definir devolverproductos Como entero;
+	
+	Definir nombres Como caracter;
+	Definir apellidos Como caracter;
+	
+	
+	
+	encabezado<- encabezadod("");
+	nombres <- capturar_nombre("nombre");
+	apellidos <- capturar_apellido("apellidos");
+	Limpiar Pantalla;
+	encabezado<- encabezadod("");
+	Escribir nombres, " " , apellidos, " Bienvenido al programa";
+	menu <- escribirMenu("");
+	
+	
+	
+	leer opcion;
+	segun opcion Hacer
+		1:
+			Limpiar pantalla;
+			encabezado<- encabezadod("");
+			productos_disponibles<-valoresproductos("");
+			Escribir nombres, " " , apellidos, ", Disfruta de nuestros servicios";
+		2:  
+			Limpiar pantalla;
+			encabezado<- encabezadod("");
+			venta_productos<-comprar_productos("");
+			Escribir nombres, " " , apellidos, ", Disfruta de nuestros servicios";
+			
+		3:
+			limpiar pantalla;
+			encabezado<- encabezadod("");
+			devolverproductos <-devolverprod("");
+			Escribir"            ", nombres, " " , apellidos, " Resolveremos muy pronto tu inconveniente.";
+			
+		de otro modo 
+			Escribir"Opción fallida";	
+			
+		
+	FinSegun
+	
+FinProceso

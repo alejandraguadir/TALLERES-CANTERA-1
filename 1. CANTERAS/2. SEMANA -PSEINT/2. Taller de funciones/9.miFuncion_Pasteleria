@@ -1,0 +1,108 @@
+//El profesor de geometría está explicando a sus estudiantes las fórmulas para calcular el área de diferentes figuras geométricas, para ello requiere una aplicación que le 
+//facilite el ejercicio solicitándole los valores al estudiante. La aplicación debe permitir que el estudiante seleccione si desea calcular el área de un rectángulo, /
+//triángulo o trapecio. No olvide solicitar los datos necesarios para realizar cada cálculo y mostrar su respectivo resultado.
+SubProceso area <- aRectangulo (base, altura)
+	Definir area  Como Real;
+	area<-base*altura;
+	Escribir "Area = ", area;
+	
+FinSubProceso
+
+SubProceso area <- aTriangulo (base, altura)
+	Definir area  Como Real;
+	area<-(base*altura)/2;
+	Escribir "Area = ", area;
+FinSubproceso
+
+SubProceso area <- aTrapecio (base,base2, altura)
+	Definir area  Como Real;
+	area<-((base +base2)/2)*altura;
+	Escribir "Area = ", area;
+	
+FinSubproceso
+
+SubProceso area <-capturaAltura(altura)
+	Definir area Como Real;
+	Escribir "Ingrese  ", altura Sin Saltar;
+	leer area;
+	
+FinSubProceso
+
+SubProceso area <-capturaBase(base)
+	Definir area Como Real;
+	Escribir "Ingrese ", base Sin Saltar;
+	Leer area;
+FinSubProceso
+
+SubProceso area <-capturaBase2(base2)
+	Definir area Como Real;
+	Escribir "Ingrese ", base2 Sin Saltar ;
+	Leer area;
+FinSubProceso
+
+Proceso areas
+	
+	Definir variable1 Como Real;
+	Definir variable2 Como Real;
+	Definir variable3 Como Real;
+	Definir variable4 Como Real;
+	Definir variable5 Como Real;
+	Definir variable6 Como Real;
+	Definir opcion Como Real;
+	
+	
+	
+	Repetir
+		Escribir "=======================Calculadora de Áreas========================";
+		Escribir "1. Área del rectángulo";
+		Escribir "2. Área del triángulo";
+		Escribir "3. Área del trapecio";
+		Escribir "4. Salir";
+		
+		Leer opcion;
+		
+		si opcion = 1 Entonces
+			Limpiar Pantalla;
+			Escribir "=======================Calculadora de Áreas========================";
+			Escribir "1. Área del rectángulo = b*h";
+			variable1<-capturaAltura("altura: ");
+			variable2<-capturaBase("base: ");
+			variable4<-aRectangulo(variable1,variable2);
+			
+			
+		FinSi
+		
+		si opcion = 2 Entonces
+			Limpiar Pantalla;
+			Escribir "=======================Calculadora de Áreas========================";
+			Escribir "2. Área del triángulo = (b*h)/2";
+			variable1<-capturaAltura("altura: ");
+			variable2<-capturaBase("base: ");
+			variable5<-aTriangulo(variable1,variable2);
+			
+		FinSi
+		
+		si opcion = 3 Entonces
+			Limpiar Pantalla;
+			Escribir "=======================Calculadora de Áreas========================";
+			Escribir "3. Área del trapecio = ((B+b)/2)*h";
+			variable1<-capturaAltura("altura: ");
+			variable2<-capturaBase("base: ");
+			variable3<-capturaBase2("base mayor: ");
+			variable6<-aTrapecio(variable1, variable3, variable2);
+			
+		FinSi
+		
+		si opcion <1 |opcion>4 Entonces
+			Limpiar Pantalla;
+			Escribir "=======================Calculadora de Áreas========================";
+			Escribir "Opción no disponible";
+		FinSi
+	Hasta Que opcion = 4
+	
+	
+	
+	
+	
+	
+FinProceso

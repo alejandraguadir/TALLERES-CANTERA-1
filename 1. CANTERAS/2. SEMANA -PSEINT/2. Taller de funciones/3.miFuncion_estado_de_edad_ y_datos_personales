@@ -1,0 +1,49 @@
+//Realizar un programa en el cual se solicite el nombre, apellidos y edad de la persona. Si la persona es mayor o igual a 18 años, 
+//entonce se deberá imprimir en pantalla [Nombre completo] usted es mayor de edad, por lo tanto puede entrar a la fiesta. 
+//Si la edad de la persona es menor que 18 años, entonces, deberá imprimirse el siguiente mensaje: [Nombre completo] usted es menor de edad, 
+//por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.
+subproceso respuesta_edad <- calcular_e(num1)
+	
+	Definir respuesta_edad Como real;
+	si (num1 >= 18) Entonces
+		respuesta_edad <- 1;
+	sino
+		respuesta_edad <- 2;
+	FinSi
+FinSubProceso
+
+subproceso respuesta_edad <- capturar_nombre(nombre)
+	Definir respuesta_edad Como caracter;
+	Escribir "Digite sus ", nombre , " completos: " sin saltar;
+	Leer respuesta_edad;
+FinSubProceso
+subproceso respuesta_edad <- capturar_apellido(apellido)
+	Definir respuesta_edad Como caracter;
+	Escribir "Digite sus ", apellido, " completos: " sin saltar;
+	Leer respuesta_edad;
+FinSubProceso
+
+subproceso respuesta_edad <- capturarNumero(posicion)
+	Definir respuesta_edad Como entero;
+	Escribir "Digite ", posicion, " en números enteros: " sin saltar;
+	Leer respuesta_edad;
+FinSubProceso
+
+Proceso miFuncion
+	Definir variable1 Como entero;
+	Definir variable2 Como caracter;
+	Definir variable3 Como caracter;
+	Definir respuestaedad Como entero;
+	
+	variable2 <- capturar_nombre("nombres");
+	variable3 <- capturar_apellido("apellidos");
+	variable1 <- capturarNumero("su edad");
+	respuestaedad<- calcular_e (variable1);
+	
+	si respuestaedad = 1 Entonces
+		Escribir variable2," ", variable3,  " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+	sino
+		Escribir variable2," ", variable3, " no puede entrar a la fiesta, por favor devuélvase a su casa.";
+	FinSi
+	
+FinProceso

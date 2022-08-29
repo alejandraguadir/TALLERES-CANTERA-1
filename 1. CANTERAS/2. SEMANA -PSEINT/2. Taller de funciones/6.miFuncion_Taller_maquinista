@@ -1,0 +1,165 @@
+//El taller de motos "El Maquinista" recibe motocicletas de alto cilindraje para realizar las respectivas revisiones y requiere una aplicación que le permita 
+//registrar los servicios generados a sus clientes. Para cada motocicleta se debe tener registro del ingreso al taller y las observaciones por parte del cliente. 
+//También debe existir registro de salida del taller con las novedades y otra de arreglos hechos por el mecánico en caso de que se requiera inventariar cambios 
+//repuestos en la motocicleta al entregarla.
+SubProceso encabezado<- encabezadot(tallerm)
+	Definir encabezado  Como Caracter;
+	Escribir "----------------------------------------------------------------------";
+	Escribir "-----------------Taller de motos  el Maquinista----------------------- ";
+	Escribir "----------------------------------------------------------------------";
+FinsubProceso
+
+SubProceso registroMotocicletas<- registroFecha()
+	Definir registroMotocicletas Como entero;
+	Definir dia como entero;
+	Definir mes Como Entero;
+	Definir anio Como Entero;
+	Definir placa Como Caracter;
+	Definir observaciones Como Caracter;
+	Escribir "Ingresa dia: ", sin saltar;
+	Leer dia;
+	si dia <32 Entonces
+		Escribir "Ingresa mes: ", sin saltar;
+		Leer mes;
+		si mes <13 Entonces
+			Escribir "Ingresa año: ", sin saltar;
+			Leer anio ;
+			si anio <2030 Entonces
+				Escribir "Ingresa placa:", sin saltar;
+				Leer placa ;
+				si placa == placa Entonces
+					Escribir "Ingresa observaciones realizadas por el cliente: ", sin saltar;
+					Leer observaciones ;
+				sino
+					Escribir "Se requiere el registro de una observación";
+					
+				FinSi
+			sino
+				Escribir "Ingresa un valor adecuado";
+				
+			FinSi
+		SiNo
+			Escribir "Ingresa un valor adecuado";	
+			
+		FinSi
+	sino 
+		Escribir "Ingresa un valor adecuado";		
+		
+	FinSi
+	Limpiar Pantalla;
+	Escribir "----------------------------------------------------------------------";
+	Escribir "-----------------Taller de motos  el Maquinista----------------------- ";
+	Escribir "----------------------------------------------------------------------";
+	Escribir " ";
+	
+	Escribir "**Fecha de registro: ", dia,"-",mes, "-",anio, " ** Motocicleta con placa: ", placa;
+	Escribir "La motocicleta ingresa con las siguientes observaciones: ", observaciones;
+	Escribir " ";
+	Escribir "-------------------Registro realizado con exito------------------------";
+	Escribir "----------------------------------------------------------------------";
+FinSubProceso 
+
+subproceso respuestaNombreApellido<- capturarDatosCliente(datos)
+	Definir respuestaNombreApellido Como caracter;
+	Escribir "Digite nombres y apellidos del cliente ", sin saltar;
+	Leer respuestaNombreApellido;
+	Escribir "Cliente: ", respuestaNombreApellido;
+
+	
+FinSubProceso
+
+SubProceso fechaDeSalida<-fdesalida(fecha)
+	definir fechaDeSalida como entero;
+	Definir dia como entero;
+	Definir mes Como Entero;
+	Definir anio Como Entero;
+	Definir placa Como Caracter;
+	Definir observaciones Como Caracter;
+	Escribir "Ingresa dia: ", sin saltar;
+	Leer dia;
+	si dia <32 Entonces
+		Escribir "Ingresa mes: ", sin saltar;
+		Leer mes;
+		si mes <13 Entonces
+			Escribir "Ingresa año: ", sin saltar;
+			Leer anio ;
+			si anio <2030 Entonces
+				
+				Escribir "**Fecha de registro de salida: ", dia,"-",mes, "-",anio;
+			sino
+				Escribir "Ingresa un valor adecuado";
+				
+			FinSi
+		SiNo
+			Escribir "Ingresa un valor adecuado";	
+			
+		FinSi
+	sino 
+		Escribir "Ingresa un valor adecuado";		
+		
+	FinSi
+	
+	
+FinSubProceso
+
+Proceso Taller_maquinista
+	Definir opcion como entero;
+	Definir encabezadotaller como caracter;
+	Definir registro_motocicleta Como Entero;
+	Definir datosCliente Como Caracter;
+	definir novedades_mecanico Como Caracter;
+	Definir novedades_taller como caracter;
+	Definir fechasalida Como Entero;
+	
+	
+	encabezadotaller<-encabezadot("");
+
+	Escribir " ";
+	Escribir " Elije una opción:";
+	Escribir"1. Registro de motocicleta.";
+	
+	
+	Leer opcion;
+	Segun opcion hacer
+		1:
+			Limpiar Pantalla;
+			
+			encabezadotaller<-encabezadot("");
+			datosCliente<-capturarDatosCliente("");
+			registro_motocicleta<-registroFecha();
+			
+				Escribir "Elija una opción";
+				Escribir "1.Registrar novedades del mecanico";
+				Escribir "2.Registrar novedade del taller";
+				leer  opcion;
+				segun opcion Hacer
+					1:
+						Escribir "Novedades del mecanico";
+						Leer novedades_mecanico;
+						fechasalida<-fdesalida("");
+						
+						Escribir "Novedades guardadas con exito";
+						
+						Escribir "Novedades guardadas con exito: ",novedades_mecanico;
+						
+					2:
+						Escribir "Novedades del taller";
+						Leer novedades_taller;
+						fechasalida<-fdesalida("");
+						Escribir "Novedades guardadas con exito";
+						
+						Escribir "Novedades guardadas con exito", novedades_taller;
+						
+						
+					de otro modo:
+						Escribir "Opción fallida";
+						
+						
+				FinSegun
+				
+		
+		De Otro Modo:
+			Escribir "Opción fallida";
+	FinSegun
+
+FinProceso

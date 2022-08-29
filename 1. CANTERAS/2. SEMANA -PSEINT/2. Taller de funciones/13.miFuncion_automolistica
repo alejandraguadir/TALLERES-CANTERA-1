@@ -1,0 +1,154 @@
+Proceso automovilistica
+	//La escuela automovilística "El Maestro" requiere una aplicación que permita registrar a sus clientes en los cursos de enseñanza automovilística y establecer quienes lo 
+	//han aprobado para continuar con el trámite de adquirir la licencia de conducción. Para cada usuario se debe permitir registrar su ingreso al curso, consultar usuarios que 
+	//hayan presentado el curso y resultados de la prueba del curso (si fueron aprobados o no). Recuerde que el sistema debe terminar cuando el usuario así lo indique. 
+	//Tenga presente que la escuela tiene capacidad máxima de gestionar 8 usuarios en su totalidad.
+	Definir listaId,listaNombreCliente, listaApellidoCliente, listaTelefono Como Caracter;
+	Definir calificacion como real;
+	Dimension listaId[7];
+	Dimension listaNombreCliente[7];
+	Dimension listaApellidoCliente[7];
+	Dimension calificacion[7];
+	Dimension listaTelefono[7];
+	Definir opcion, dato,contador,i,k,j,aux como entero;
+	i<-0;
+	j<-0;
+	k<-0;
+	contador<-0;
+	opcion<-0;
+		
+	inicializar(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono);
+	Repetir
+		menu;
+		Leer opcion;
+		segun opcion hacer
+			1:
+				para j<-0 hasta 1 Hacer
+					si listaTelefono(j) = "0" entonces
+						contador<-contador+1;
+						k<-j;
+						j<-8;
+						
+					FinSi
+				FinPara
+				si i<8 o contador>0 Entonces
+					aux <-i;
+					i<-k;
+				
+					guardarAprendiz(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i);
+					contador<-0;
+					i<-aux;
+					i<-i+1;
+					Escribir "Clientes registrados = ",i;				
+					
+				FinSi
+				
+			2:
+				Escribir "Clientes registrados: ",i;
+				verAprendices(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i);
+				
+			3:
+				estadoAprendices(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i);
+				
+			
+		FinSegun
+	Hasta Que opcion = 4;
+FinProceso
+
+SubProceso menu
+	Escribir "===Escuela automovilística -El Maestro- ===";
+	Escribir "1.Registrarse al curso de automovilistica";
+	Escribir "2.Usuarios registrados";
+	Escribir "3.Resultados de la prueba";
+	Escribir "4.Salir";
+	Escribir"============================================";
+FinSubProceso
+
+SubProceso inicializar(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono)
+	Definir L Como ENTERO;
+	Definir LL Como REAL;
+	Para l<-0 Hasta 1 Hacer
+		listaId(L)<-"0";
+		listaNombreCliente(L)<-"0";
+		listaApellidoCliente(L)<-"0";
+		
+		listaTelefono(L)<-"0";
+	FinPara
+	para ll <-0 hasta 1 Hacer
+		calificacion(LL)<-0;
+	FinPara
+FinSubProceso
+
+SubProceso guardarAprendiz(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i)
+	Definir numeroTelefono Como Caracter;
+	Definir contador Como Entero;
+	Definir val Como Entero;
+	Definir placa Como Caracter;
+	contador<-0;
+	val<-0;	
+	Escribir "Aprendices registrados= ",i;
+	Escribir "";
+	Escribir "Digite los siguientes datos: ";
+	Escribir "Cedula de cliente: "Sin Saltar;
+	Leer listaId(i);
+	Escribir "Nombre cliente: "Sin Saltar;
+	Leer listaNombreCliente(i);
+	Escribir "Apellido Cliente: "Sin Saltar;
+	Leer listaApellidoCliente(i);
+	Escribir "Registro de calificación: "Sin Saltar;
+	Leer calificacion(i);
+	Mientras val = 0 Hacer
+		Escribir "Número de telefono: "Sin Saltar;
+		Leer numeroTelefono;
+		Escribir "";
+		si Longitud(numeroTelefono)=10 Entonces
+			listaTelefono[i]<-numeroTelefono;
+			val<-1;
+		SiNo
+			Escribir "El número ingresado no tiene 10 digitos";
+			val<-0;
+			
+		FinSi
+	FinMientras
+	
+FinSubProceso
+
+SubProceso verAprendices(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i)
+	Definir j Como Entero;
+	j<-0;
+	Para j<-0 Hasta 1 Hacer
+		si listaTelefono(j)<>"0" Entonces
+			Escribir "===Usuarios registrados en la automovilística===";
+			Escribir "";
+			Escribir "Nombre cliente: ", listaNombreCliente(j);
+			Escribir "Apellido cliente: ",listaApellidoCliente(j);
+			Escribir "Calificación: ", calificacion(j);
+			Escribir "Telefono: ",listaTelefono(j);
+			Escribir"========================================================";
+			Escribir "";
+		FinSi		
+	FinPara
+FinSubProceso
+
+SubProceso estadoAprendices(listaId,listaNombreCliente, listaApellidoCliente, calificacion, listaTelefono,i)
+	Definir j Como Entero;
+	j<-0;
+	Para j<-0 Hasta 1 Hacer
+		si listaTelefono(j)<>"0" Entonces
+			Escribir "===Estado de clientes - automovilística===";
+			Escribir "";
+			Escribir "Nota: si su calificación es supeior o igual a 50 ";
+			Escribir "aprueba el curso en caso contrario no aprueba el curso";
+			Escribir "";
+			Escribir "Nombre cliente: ", listaNombreCliente(j);
+			Escribir "Apellido cliente: ",listaApellidoCliente(j);
+			Escribir "Calificación: ", calificacion(j);
+			si calificacion(j) <50 Entonces
+				Escribir "NO APROBÓ - Su calificación es inferior a 50";
+			SiNo
+				Escribir "APROBÓ - Su calificación es superior o igual a 50";				
+			FinSi
+			Escribir"===============================================";
+		FinSi		
+	FinPara
+FinSubProceso

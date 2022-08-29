@@ -1,0 +1,156 @@
+//El parqueadero "El guardián" presta sus servicios de parqueadero nocturno para los usuarios del barrio y requiere una aplicación que permita registrar los vehículos 
+//que se cuidan en estas instalaciones. Se sugiere que el parqueadero tenga los atributos del vehículo como son, placa y marca, y los datos del cliente como son nombre
+//completo y número de teléfono. Para cada vehículo se debe permitir la opción de ingresar al parqueadero, retirar del parqueadero y consultar si un vehículo se encuentra 
+//en el parqueadero. Recuerde que el sistema debe terminar cuando el usuario así lo indique. Tenga en presente que el parqueadero solo puede almacenar máximo 5 vehículos.
+Proceso parqueadero
+	Definir listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono Como Caracter;
+	Dimension listaNombreCliente[4];
+	Dimension listaApellidoCliente[4];
+	Dimension listaPlaca[4];
+	Dimension listaMarca[4];
+	Dimension listaTelefono[4];
+	
+	Definir nombreCliente, placa, marca, numeroTelefono Como Caracter;
+	Definir opcion, dato,contador,i,k,j,aux como entero;
+	i<-0;
+	j<-0;
+	k<-0;
+	contador<-0;
+	opcion<-0;
+	inicializar(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono);
+	
+	Repetir
+		menu;
+		leer opcion ;
+		
+		segun opcion hacer
+			1:
+				para j<-0 hasta 1 Hacer
+					si listaPlaca(j) = "0" entonces
+						contador<-contador+1;
+						k<-j;
+						j<-3;
+						
+						
+					FinSi
+				FinPara
+				si i<5 o contador>0 Entonces
+					aux <-i;
+					i<-k;
+					
+					guardarvehiculo(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i);
+					contador<-0;
+					i<-aux;
+					i<-i+1;
+					Escribir "Vehículos registrados= ",i;				
+					
+				FinSi
+				
+			2:
+				Escribir "Vehículos parqueados: ",i;
+				verVehiculos(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i);
+				
+			3:
+				eliminarVehiculos(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i);
+				
+			De Otro Modo:
+				Escribir "Opción fallida";
+		FinSegun
+	Hasta Que opcion = 4
+FinProceso
+SubProceso menu
+	Escribir "===Parqueadero el Guardian===";
+	Escribir " Elija una opción:";
+	Escribir "1.Registrar vehículo.";
+	Escribir "2.Ver vehículos";
+	Escribir "3.Retirar vehículos del parqueadero";
+	Escribir "4.Salir";
+	Escribir"==============================";
+	
+	
+FinSubProceso
+
+SubProceso inicializar(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono)
+	Definir L Como Entero;
+	Para l<-0 Hasta 1 Hacer
+		listaNombreCliente(L)<-"0";
+		listaApellidoCliente(L)<-"0";
+		listaPlaca(L)<-"0";
+		listaMarca(L)<-"0";
+		listaTelefono(L)<-"0";
+	FinPara
+FinSubProceso
+
+SubProceso guardarvehiculo(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i)
+	Definir numeroTelefono Como Caracter;
+	Definir contador Como Entero;
+	Definir val Como Entero;
+	Definir placa Como Caracter;
+	contador<-0;
+	val<-0;
+	placa<-"";
+	listaPlaca[i]<-placa;
+	
+	Escribir "Automoviles parqueados= ",i;
+	Escribir "";
+	Escribir "Digite los siguientes datos: ";
+	Escribir "Nombre cliente: "Sin Saltar;
+	Leer listaNombreCliente(i);
+	Escribir "Apellido Cliente: "Sin Saltar;
+	Leer listaApellidoCliente(i);
+	Escribir "Placa: "Sin Saltar;
+	Leer listaPlaca(i);
+	Escribir "Marca del vehículo: "Sin Saltar;
+	Leer listaMarca(i);
+	Mientras val = 0 Hacer
+		Escribir "Número de telefono: "Sin Saltar;
+		Leer numeroTelefono;
+		Escribir "";
+		si Longitud(numeroTelefono)=10 Entonces
+			listaTelefono[i]<-numeroTelefono;
+			val<-1;
+		SiNo
+			Escribir "El número ingresado no tiene 10 digitos";
+			val<-0;
+			
+		FinSi
+	FinMientras
+	
+FinSubProceso
+
+SubProceso verVehiculos(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i)
+	Definir j Como Entero;
+	j<-0;
+	Para j<-0 Hasta 1 Hacer
+		si listaTelefono(j)<>"0" Entonces
+			Escribir "=== Vehículos parqueados en Parqueadero el Guardian===";
+			Escribir "Nombre cliente: ", listaNombreCliente(j);
+			Escribir "Apellido cliente: ",listaApellidoCliente(j);
+			Escribir "Placa: ", listaPlaca(j);
+			Escribir "Marca: ",listaMarca(j);
+			Escribir "Telefono: ",listaTelefono(j);
+			Escribir"========================================================";
+		FinSi
+		
+	FinPara
+FinSubProceso
+
+SubProceso eliminarVehiculos(listaNombreCliente,  listaApellidoCliente,listaPlaca,listaMarca, listaTelefono,i)
+	Definir j Como Entero;
+	j<-0;
+	Escribir "";
+	Escribir "Digita la placa del vehículo que deseas eliminar: " Sin Saltar;
+	leer placa;
+	Escribir "";
+	Para j<-0 Hasta i-1 Hacer
+		si (listaTelefono(j)=placa) Entonces
+			listaNombreCliente(j)<-"0";
+			listaApellidoCliente(j)<-"0";
+			listaPlaca(j)<-"0";
+			listaMarca(j)<-"0";
+			listaTelefono(j)<-"0";
+		FinSi
+		
+	FinPara
+	
+FinSubProceso

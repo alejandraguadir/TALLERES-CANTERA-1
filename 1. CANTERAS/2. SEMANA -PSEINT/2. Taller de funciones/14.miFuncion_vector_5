@@ -1,0 +1,22 @@
+Proceso vector
+	Definir numeros_vector, i Como Entero;
+	Dimension 	numeros_vector[5];
+	
+	listaNumeros(numeros_vector);
+FinProceso
+
+
+SubProceso listaNumeros(numeros_vector)
+	definir i Como Entero;
+	para i<-0 hasta 4 Con Paso 1 hacer 
+		Escribir "Ingrese un número";
+		Leer numeros_vector[i];
+	FinPara
+	
+	Escribir "Los números ingresados corresponden a: ";
+	Escribir "";
+	para i<-0 hasta 5-1 Con Paso 1 hacer 
+		
+		Escribir "   [",i,"] ", " = ", numeros_vector[i];
+	FinPara
+FinSubProceso

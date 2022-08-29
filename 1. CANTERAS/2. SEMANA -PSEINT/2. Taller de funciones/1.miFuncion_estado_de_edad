@@ -1,0 +1,29 @@
+subproceso respuesta_edad <- calcular_e(num1)
+	definir respuesta_edad como real;
+	si (num1 >= 18) Entonces
+		respuesta_edad <- 1;
+	sino
+		respuesta_edad <- 2;
+	FinSi
+FinSubProceso
+
+subproceso respuesta_edad <- capturarNumero(posicion)
+	definir respuesta_edad como entero;
+	Escribir "Digite ", posicion, " número: " sin saltar;
+	leer respuesta_edad;
+FinSubProceso
+
+Proceso miFuncion
+	Definir variable1 como entero;
+	Definir respuestaedad como real;
+	variable1 <- capturarNumero("su edad");
+	
+	respuestaedad<- calcular_e (variable1);
+		
+	si respuestaedad = 1 entonces
+		Escribir "Eres mayor de edad";
+	sino
+		Escribir "Eres menor de edad";
+	FinSi
+	
+FinProceso

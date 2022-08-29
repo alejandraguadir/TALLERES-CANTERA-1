@@ -1,0 +1,104 @@
+@font-face {
+    font-family: Lato;
+    src: url("../font/Lato-Regular.ttf");
+}
+.encabezado {
+    top:10%;
+    width: 900px;
+    height: 200px;
+    margin: auto ;
+    background : url('imagen.jpg');
+    border: #161414 1px solid ;
+}
+#botonCambiarColor{
+    width: 900px;
+    height: 20px;
+    margin: 0 auto ;
+    
+}
+.img{
+    position:absolute;
+    top:2%;
+    right: 18%;
+    width: 50 px;
+    height: 10 px;
+    border: 10px;
+    border-radius: 100%;
+    transform: skewY(0deg);
+    overflow: hidden;
+    margin: 0 auto;
+    display: block;
+}
+img {
+
+    width: auto;
+    height: auto;
+    max-height: 157.5px;
+    max-width: 118px;
+
+}
+body {
+    background-color: #dfdfdf;
+    }
+.pink{ 
+    background-color: PINK;}
+.blue{
+    background-color: blue; 
+}
+.green{
+    background-color: green; 
+}
+nav ul{
+    background: #1b1e21;
+    margin: 0;
+    padding: 0;
+    height: 45px;
+    margin: 0 auto ;
+    width : 900px ;
+}
+nav ul li{
+    display: inline-table;
+    margin: 10px;
+    color: #fff;
+}
+nav ul li:hover > a{
+    background: #4e555b;
+    cursor: pointer;
+}
+nav ul li.active > a{
+    background: #ffdf7e;
+    color:#1b1e21;
+    font-weight: bold;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 0px;
+}
+nav ul li.right{
+    float: right;
+}
+.contenedor {
+    font-size:1em;
+    background-color: #ffffff;
+    border:#d3d3d3 1px solid;
+    text-align: justify;
+    margin:  auto ;
+    width : 900px ;
+}
+#margenBloque{
+    margin: 30px;
+}
+footer{
+    font-size:1em;
+    background-color: #ffffff;
+    border:#d3d3d3 1px solid;
+    text-align: justify;
+    margin: 20px auto;
+    width : 900px ;
+
+
+}
+.listaFooter{
+    list-style: none;
+}

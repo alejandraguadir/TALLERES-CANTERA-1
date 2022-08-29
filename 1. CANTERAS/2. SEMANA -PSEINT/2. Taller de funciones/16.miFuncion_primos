@@ -1,0 +1,29 @@
+Proceso numerosPrimos
+	
+	Escribir "Números primos del 1 al 1000";
+	Escribir "";
+	condiciones();
+	
+FinProceso
+
+subproceso condiciones()
+	Definir num_2, num_1, contador  Como Entero;
+	num_2<-1;
+	mientras num_2<=1000 hacer 	
+		num_1<-1;
+		contador<-0;
+		mientras num_1<= num_2 Hacer
+			si num_2%num_1 =0 Entonces
+				contador<-contador+1;
+			FinSi
+			num_1<- num_1+1 ;
+		FinMientras
+		si contador=2 Entonces
+			escribir num_2, " - ", sin saltar;
+			
+		FinSi
+		num_2 <- num_2 +1;
+	FinMientras
+	
+FinSubProceso
+	
