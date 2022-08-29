@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo hacer un Acordeón con HTML, CSS y JS</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="img">
+            <figure>
+                <img src="foto.jpg" foto />
+            </figure>
+        </section>
+        <section class="tituloPrincipal" id="margenBloque">
+            <h1 class="subtitulos">Hoja de vida</h1>
+            <h2 class="subtitulos">Yolima Alejandra Guadir</h2>
+            <h2 class="subtitulos"> Análisis y desarrollo de sistemas</h2>
+        </section>
+    </header>
+    <section class="contenedores" id="botonCambiarColor">
+        <form class="color" id="margenBloque">
+            <select id="mySelection" name="BackgroundChanger" onchange="colorChanger()">
+                <option value="">Cambiar color </option>
+                <option class="pink" name="colors" value="pink"></option>
+                <option class="blue" name="blue" value="blue"></option>
+                <option class="green" name="green" value="green"></option>
+            </select>
+        </form>
+        <script>colorChanger()</script>
+
+    </section>
+    <section class="navegacion">
+        <nav class="opciones">
+            <ol>
+                <li><a href="index.html">Información principal</a> </li>
+                <li><a href="1estudios.html">Experiencia laboral </a> </li>
+                <li><a href="2experiencia.html">Referencias personales </a> </li>
+                <li><a href="3referenciasP.html">Referencias familiares</a> </li>
+                <li><a href="4referenciasF.html">Estudios realizados</a> </li>
+            </ol>
+        </nav>
+    </section>
+    <div class="acordeon">
+        <div class="bloque">
+            <h2 class="h2" id="h2nombre">Información principal</h2>
+            
+        </div>
+        <div class="bloque activo">
+            <h2 class="h2">Perfil profesional</h2>
+            <div class="contenido">Soy licenciada en matemáticas y física con gran pasión e interés por la programación.
+                Me considero una persona responsable con gran sentido de compromiso, actualmente finalice la etapa
+                lectiva de la formación en tecnología en Análisis y Desarrollo de Sistemas de Información (ADSI) y soy
+                estudiante del programa MisiónTic 2022. Cuento con bases de conocimientos en PHP, HTML, CSS, Java y
+                MySQL. Mis conocimientos han sido enriquecidos mediante el autoaprendizaje.desarrollo de cursos en
+                platzi y en la plataforma Sheworks en analítica de datos con perspectiva ética.</div>
+        </div>
+        <div class="bloque">
+            <h2 class="h2">Habilidades técnicas</h2>
+            <div class="contenido">
+                <ol>
+                    <li>Manejo de diseño de diagramas UML de clases, Entidad relación, componentes, secuencia,
+                        relacional,etc.</li>
+                    <li>Manejo de base de datos relacionales MySQL.</li>
+                    <li>Manejo de la determinación de la estructura lógica del sistema de información</li>
+                    <li>Conocimientos sobre prácticas de calidad en el desarrollo de software.</li>
+                </ol>
+            </div>
+        </div>
+        <div class="bloque">
+            <h2 class="h2">Descargar Cv.</h2>
+            <div class="contenido">
+                <p class="subtitulos"><a download="hojadeVida" href="H.V. Yolima_Guadir.pdf"><b>Descargar Cv.</b></a>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+    <script src="./script.js"> </script>
+</body>
+<footer>
+    <div class="contenido">
+        <ol class="listaFooter">
+
+            <li><b>Cl: <i>3022510379</i></b></li>
+            <li><b>Email: <i>alejandra.guadir@gmail.com</i></b></li>
+            <li><b>Cali - Colombia</b></li>
+        </ol>
+    </div>
+
+</footer>
+
+</html>
