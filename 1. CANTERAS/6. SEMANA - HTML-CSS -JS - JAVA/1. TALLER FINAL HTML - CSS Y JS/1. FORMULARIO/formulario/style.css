@@ -7,12 +7,12 @@ body{
     font-family: sans-serif;
 }
 .formulario{
-    width: 500px;
-    max-width: 100%;
+    width: 400px;
+    max-width: 200%;
 
     margin: auto;
     margin-top: 30px;
-    padding: 20px;
+    padding: 60px;
     box-shadow: 0 0 20px 1px rgba(0, 0,0, 0.3);
     position: relative;
 }
@@ -30,9 +30,10 @@ body{
     
 }
 .formulario_input{
-    padding: 40px;
+    padding: 20px;
+  
     border: 1px solid rgba(0, 0,0, 0.3);
-    margin-bottom: 40px;
+    margin-bottom: 80px;
     background-color: transparent;
 
 }
@@ -43,11 +44,11 @@ outline: 1px solid rgba(0,0,0,0.7);
 
 .formulario_input:focus +
 .formulario_label {
-    margin-top: -130px;
+    margin-top: -180px;
     }
 
 .formulario_label{
-    padding-left: 30px;
+    padding-left: 10px;
     position: absolute;
     margin-top: -40px;
     z-index: 1;
@@ -60,9 +61,10 @@ outline: 1px solid rgba(0,0,0,0.7);
     padding: 10px 20px;
     cursor:pointer;
     border: none;
+    forced-color-adjust:inherit;
 
 }
 hr{
     border: none;
-    color: white;
+    
 }
