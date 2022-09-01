@@ -1,3 +1,5 @@
+'use strict'
+
 const bloque    = document.querySelectorAll('.bloque')
 const h2        = document.querySelectorAll('.h2')
     
@@ -26,7 +28,11 @@ h2.forEach( ( cadaH2 , i )=>{
 //Función para cambiar el color de fondo de la pagina
 function colorChanger() {
     var selectValue = document.getElementById('mySelection').value;
-    document.getElementById;
+    document.getElementById;//('dummy').innerHTML='You selected: '+selectValue;
+    //var div=document.getElementById('contenedor').style.backgroundColor=selectValue;
+    //var div2=document.getElementById('contenedor2').style.backgroundColor=selectValue;
+    
+    //document.body.style.backgroundColor = selectValue;
     for (let index = 0; index < document.getElementsByClassName('contenido').length; index++) {
         var div=document.getElementsByClassName('contenido')[index].style.backgroundColor=selectValue;
         

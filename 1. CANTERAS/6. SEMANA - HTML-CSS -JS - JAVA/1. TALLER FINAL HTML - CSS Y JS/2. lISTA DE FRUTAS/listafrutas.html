@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js"> </script>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" class="form" id="formulario">
+            <h1 id="titulo">Frutas</h1>
+            <ol>
+                <li class="impar">Uvas</li>
+                <li class="par">Manzanas</li>
+                <li class="impar">Peras</li>
+                <li class="par">Moras</li>
+                <li class="impar">Naranjas</li>
+                <li class="par">Melocotón</li>
+                <li class="impar">Mandarina</li>
+                <li class="par">Fresa</li>
+                <li class="impar">Piña</li>
+                <li class="par">Tomate</li>
+            </ol>
+            <h5 id="titutoDesplegable">Elige un tema</h5>
+            <button type="button" id="tema1">Tema 1</button>
+
+            <select id="mySelection1" name="BackgroundChanger" onchange="colorChanger1()">
+                <option id="default" value="aquamarine">Default</option>
+                <option id="color1" value="pink">Rosa</option>
+                <option id="color2" value="rgb(255, 123, 0)">Naranja</option>
+            </select>
+           
+            <button type="button" id="tema2">Tema 2</button>
+
+
+            <select id="mySelection2" name="BackgroundChanger" onchange="colorChanger2()">
+                <option id="default" value="aquamarine">Default</option>
+                <option id="color3" value="red">Rojo</option>
+                <option id="color4" value="green">verde</option>
+            </select>
+        </form>
+
+    </div>
+    <script src="./script.js"> </script>
+</body>
+
+</html>

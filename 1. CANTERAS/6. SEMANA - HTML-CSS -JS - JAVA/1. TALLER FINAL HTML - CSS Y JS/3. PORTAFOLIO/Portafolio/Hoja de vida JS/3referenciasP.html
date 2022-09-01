@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cómo hacer un Acordeón con HTML, CSS y JS</title>
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+
+<body>
+    <header class="encabezado">
+        <section class="img">
+            <figure>
+                <img src="foto.jpg" foto />
+            </figure>
+        </section>
+        <section class="tituloPrincipal" id="margenBloque">
+            <h1 class="subtitulos">Hoja de vida</h1>
+            <h2 class="subtitulos">Yolima Alejandra Guadir</h2>
+            <h2 class="subtitulos"> Análisis y desarrollo de sistemas</h2>
+        </section>
+    </header>
+    <section class="contenedores" id="botonCambiarColor">
+        <form class="color" id="margenBloque">
+            <select id="mySelection" name="BackgroundChanger" onchange="colorChanger()">
+                <option value="">Cambiar color </option>
+                <option class="pink" name="colors" value="pink"></option>
+                <option class="blue" name="blue" value="blue"></option>
+                <option class="green" name="green" value="green"></option>
+            </select>
+        </form>
+        <script>colorChanger()</script>
+
+    </section>
+    <section class="navegacion">
+        <nav class="opciones">
+            <ol>
+                <li><a href="index.html">Información principal</a> </li>
+                <li><a href="1estudios.html">Estudios realizados </a> </li>
+                <li><a href="2experiencia.html">Experiencia laboral </a> </li>
+                <li><a href="3referenciasP.html">Referencias personales</a> </li>
+                <li><a href="4referenciasF.html">Referencias familiares</a> </li>
+            </ol>
+        </nav>
+    </section>
+    <div class="acordeon">
+        <div class="bloque activo">
+            <h2 class="h2" id="h2nombre">Referencias personales</h2>
+
+        </div>
+        
+        <div class="bloque">
+            <h4 class="h2">
+                <li>Andres Usama - Lic en matemáticas y física</li>
+            </h4>
+            <div class="contenido">
+                Cl: 300-7478000
+            </div>
+        </div>
+        <div class="bloque">
+            <h4 class="h2">
+                <li>Mariana Rojas - Analista de sistemas</li>
+            </h4>
+            <div class="contenido">
+                Cl: 317-7479900
+            </div>
+        </div>
+        <div class="bloque">
+            <h4 class="h2">
+                <li>Karen Lozano - Ingeniera de sistemas</li>
+            </h4>
+            <div class="contenido">
+                Cl: 317-7478000
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"> </script>
+</body>
+<footer>
+    <div class="contenido">
+        <ol class="listaFooter">
+
+            <li><b>Cl: <i>3022510379</i></b></li>
+            <li><b>Email: <i>alejandra.guadir@gmail.com</i></b></li>
+            <li><b>Cali - Colombia</b></li>
+        </ol>
+    </div>
+
+</footer>
+
+</html>
