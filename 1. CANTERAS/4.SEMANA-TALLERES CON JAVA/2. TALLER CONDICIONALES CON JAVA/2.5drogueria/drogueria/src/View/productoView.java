@@ -31,7 +31,6 @@ public class productoView {
                     selectProdCosmeticos();
                     break;
                 case 3:
-                    
                     selectProdOrtopedicos();
                     break;
 
