@@ -20,9 +20,12 @@ public class CalculadorView {
         mensaje += "Ingrese el signo de la operación que desea ejecutar ";
         // Objeto scanner y variable que representa la opción ingresada por el usuario
         String opcion = "";
+        // crea objeto Scanner para obtener la entrada de la ventana de comandos
         Scanner sc = new Scanner(System.in);
+        //While para iterar hasta leer el valor que digita el usuario
         while (opcion != ".") {
             System.out.print(mensaje);
+            //Lee el valor que digita el usuario
             opcion = sc.nextLine();
             // Evaluar la opción ingresada por el usuario
             switch (opcion) {
@@ -53,17 +56,16 @@ public class CalculadorView {
                     //Opción para salir del sistema
                     return;
 
-                    
-
                 default:
                     //Sentencias para imprimir una opción que el sistema no registra
                     System.err.println("La opción " + opcion + " no es valida");
                     System.out.println("Presione 'Enter' para continuar");
+                      //Lee el valor que digita el usuario
                     sc.nextLine();
                     
-            }
+            }//Fin del switch
 
-        }
+        }//Fin del While
 
     }
 
