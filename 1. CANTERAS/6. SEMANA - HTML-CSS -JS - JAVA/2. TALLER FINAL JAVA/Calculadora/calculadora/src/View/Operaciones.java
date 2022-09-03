@@ -23,7 +23,7 @@ public class Operaciones {
             float numeroUno = numero.nextFloat();
 
             System.out.println("Segundo número");
-            // Captura el segundo número como dato float
+            // Captura el segundo número como dato float para capturar decimales y números enteros
             float numeroDos = numero.nextFloat();
             float resultado = numeroUno + numeroDos;
              //Sentencias para imprimir la los números capturados y el resultado de la operación
