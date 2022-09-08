@@ -18,15 +18,15 @@ Proceso Mi7app
 	
 	Definir opcion, iterador Como Entero;
 	Definir mensaje, consulta_placa, eliminar Como Caracter;
-	Definir seecontro, clear Como Logico;
+	Definir vehiculoexiste, claro Como Logico;
 	
 	mensaje<-"";
 	iterador<-0;
 	opcion<-0;
-	seecontro<-Falso;
-	clear <-falso;
+	vehiculoexiste<-Falso;
+	claro <-falso;
 	Repetir
-		si clear =! Verdadero Entonces
+		si claro =! Verdadero Entonces
 			Limpiar Pantalla;
 		FinSi
 		//menu
@@ -40,8 +40,8 @@ Proceso Mi7app
 		Escribir "3.Retirar del parqueadero";
 		Escribir "4.Salir";
 		leer opcion;
-		clear <-falso;
-		seecontro<-falso;
+		claro <-falso;
+		vehiculoexiste<-falso;
 		segun opcion Hacer
 			1:
 				si iterador <5 & iterador >=0 Entonces
@@ -155,9 +155,9 @@ Proceso Mi7app
 					Escribir "Telefono del propietario: ", telefono_1;
 					Escribir "Marca del vehículo: ",marca_1;
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -167,9 +167,9 @@ Proceso Mi7app
 					Escribir "Telefono del propietario: ", telefono_2;
 					Escribir "Marca del vehículo: ",marca_2;
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si consulta_placa == placa_3 Entonces
@@ -178,9 +178,9 @@ Proceso Mi7app
 					Escribir "Telefono del propietario: ", telefono_3;
 					Escribir "Marca del vehículo: ",marca_3;
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si consulta_placa == placa_4 Entonces
@@ -189,9 +189,9 @@ Proceso Mi7app
 					Escribir "Telefono del propietario: ", telefono_4;
 					Escribir "Marca del vehículo: ",marca_4;
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si consulta_placa == placa_5 Entonces
@@ -200,12 +200,12 @@ Proceso Mi7app
 					Escribir "Telefono del propietario: ", telefono_5;
 					Escribir "Marca del vehículo: ",marca_5;
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
-				si seecontro <> Verdadero Entonces
+				si vehiculoexiste <> Verdadero Entonces
 					mensaje<-"El vehículo no se encuentra en el parquedero";
 					
 				FinSi
@@ -224,9 +224,9 @@ Proceso Mi7app
 					telefono_1<-"";
 					marca_1<-"";
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 				FinSi
 				
 				si eliminar == placa_2 Entonces
@@ -235,9 +235,9 @@ Proceso Mi7app
 					telefono_2<-"";
 					marca_2<-"";
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 				FinSi
 				
 				si eliminar == placa_3 Entonces
@@ -246,9 +246,9 @@ Proceso Mi7app
 					telefono_3<-"";
 					marca_3<-"";
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 				FinSi
 				
 				si eliminar == placa_4 Entonces
@@ -257,9 +257,9 @@ Proceso Mi7app
 					telefono_4<-"";
 					marca_4<-"";
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 				FinSi
 				
 				si eliminar == placa_5 Entonces
@@ -268,13 +268,13 @@ Proceso Mi7app
 					telefono_5<-"";
 					marca_5<-"";
 					
-					seecontro<-Verdadero;
+					vehiculoexiste<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
-				si seecontro <> Verdadero Entonces
+				si vehiculoexiste <> Verdadero Entonces
 					mensaje<-"La placa ingresada no corresponde a ningún vehículo registrado";
 					
 				FinSi

@@ -14,15 +14,15 @@ Proceso Mi6app
 	//variables del sistema
 	Definir ciclo, iterador Como Entero;
 	Definir mensaje, numerotemp, eliminar Como Caracter;
-	Definir seecontro, clear Como Logico;
+	Definir telefonoexistente, claro Como Logico;
 	
 	mensaje<-"";
 	iterador<-0;
 	ciclo<-0;
-	seecontro<-Falso;
-	clear <-falso;
+	telefonoexistente<-Falso;
+	claro <-falso;
 	Repetir
-		si clear =! Verdadero Entonces
+		si claro =! Verdadero Entonces
 			Limpiar Pantalla;
 		FinSi
 		//menu
@@ -35,8 +35,8 @@ Proceso Mi6app
 		Escribir "3.Eliminar contactos";
 		Escribir "4.Salir";
 		leer ciclo;
-		clear <-falso;
-		seecontro<-falso;
+		claro <-falso;
+		telefonoexistente<-falso;
 		
 		//opciones
 		segun ciclo hacer
@@ -107,9 +107,9 @@ Proceso Mi6app
 					Escribir "Telefono: ", telefono_1;
 					Escribir "Organización: ",organizacion_1;
 					
-					seecontro<-Verdadero;
+					telefonoexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 										
 				FinSi
 				si numerotemp == telefono_2 entonces 
@@ -117,9 +117,9 @@ Proceso Mi6app
 					Escribir "Telefono: ", telefono_2;
 					Escribir "Organización: ",organizacion_2;
 					
-					seecontro<-Verdadero;
+					telefonoexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si numerotemp == telefono_3 entonces 
@@ -127,12 +127,12 @@ Proceso Mi6app
 					Escribir "Telefono: ", telefono_3;
 					Escribir "Organización: ",organizacion_3;
 					
-					seecontro<-Verdadero;
+					telefonoexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
-				si seecontro <> Verdadero Entonces
+				si telefonoexistente <> Verdadero Entonces
 					mensaje<-"Número de telefono no encontrado";
 					
 				FinSi

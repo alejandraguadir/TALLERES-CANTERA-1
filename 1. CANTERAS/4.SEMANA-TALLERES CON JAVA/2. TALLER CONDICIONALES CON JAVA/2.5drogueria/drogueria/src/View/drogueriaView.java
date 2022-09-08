@@ -3,8 +3,6 @@ package View;
 import java.util.Scanner;
 
 public class drogueriaView {
-    
-
 
     public static void menu() {
         // opciones usuario
@@ -26,17 +24,15 @@ public class drogueriaView {
             switch (opcion) {
                 case 1:
                     productoView.verProdDesinfectantes();
-                    productoView.verProdOrtopedicos();  
-                    productoView.verProdCosmeticos();               
+                    productoView.verProdOrtopedicos();
+                    productoView.verProdCosmeticos();
                     break;
                 case 2:
                     productoView.menuProductos();
                     break;
                 case 3:
-                    productoView.verProdDesinfectantes();
-                    productoView.verProdOrtopedicos();  
-                    productoView.verProdCosmeticos(); 
                     
+                    productoView.menuProductos();
                     clienteView.solicitudUsuario(sc);
                     break;
 

@@ -25,18 +25,18 @@ Proceso Mi8app
 	
 	Definir opcion, iterador Como Entero;
 	Definir mensaje, consulta_placa, eliminar, id_consultor Como Caracter;
-	Definir seecontro, clear Como Logico;
+	Definir usuarioexistente, claro Como Logico;
 	
 	
 	mensaje<-"";
 	iterador<-0;
 	opcion<-0;
-	seecontro<-Falso;
-	clear <-falso;
+	usuarioexistente<-Falso;
+	claro <-falso;
 	id_consultor<-"";
 	
 	Repetir
-		si clear <> Verdadero Entonces
+		si claro <> Verdadero Entonces
 			Limpiar Pantalla;
 		FinSi
 		
@@ -52,8 +52,8 @@ Proceso Mi8app
 		Escribir "3.Resultados de la prueba";
 		Escribir "4.Salir";
 		leer opcion;
-		clear <-falso;
-		seecontro<-falso;
+		claro <-falso;
+		usuarioexistente<-falso;
 		
 		segun opcion Hacer
 			1:
@@ -233,9 +233,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a", nota_1;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -247,9 +247,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a", nota_2;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -261,9 +261,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a: ", nota_3;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si id_consultor == id_4 Entonces
@@ -274,9 +274,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a: ", nota_4;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si id_consultor == id_5 Entonces
@@ -287,9 +287,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a: ", nota_5;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -301,9 +301,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a", nota_6;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -315,9 +315,9 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a", nota_7;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -329,12 +329,12 @@ Proceso Mi8app
 					Escribir "La Puntuación registrada coresponde a", nota_8;
 					Escribir " ";
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
-				si seecontro <> Verdadero Entonces
+				si usuarioexistente <> Verdadero Entonces
 					mensaje<-"El usuario no se encuentra registrado";
 					
 				FinSi
@@ -359,9 +359,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -378,9 +378,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -397,9 +397,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si id_consultor == id_4 Entonces
@@ -415,9 +415,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				si id_consultor == id_5 Entonces
@@ -433,9 +433,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -452,9 +452,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -471,9 +471,9 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
 				
@@ -490,12 +490,12 @@ Proceso Mi8app
 						
 					FinSi
 					
-					seecontro<-Verdadero;
+					usuarioexistente<-Verdadero;
 					mensaje<-"";
-					clear<-Verdadero;
+					claro<-Verdadero;
 					
 				FinSi
-				si seecontro <> Verdadero Entonces
+				si usuarioexistente <> Verdadero Entonces
 					mensaje<-"El usuario no se encuentra registrado";
 					
 				FinSi
