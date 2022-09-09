@@ -17,7 +17,7 @@ public class CalculadorView {
         mensaje += "/) División\n";
         mensaje += "%) Módulo \n";
         mensaje += ".) Salir\n";
-        mensaje += "Ingrese el signo de la operación que desea ejecutar ";
+        mensaje += "Ingrese el signo de la operación que desea ejecutar: ";
         // Objeto scanner y variable que representa la opción ingresada por el usuario
         String opcion = "";
         // crea objeto Scanner para obtener la entrada de la ventana de comandos
