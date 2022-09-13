@@ -1,5 +1,5 @@
 ## Repositorio de la solución de talleres Cantera 1
-##### Los talleres se encuentran organizados en los respectivos directorios
+##### Los talleres se encuentran organizados en los respectivos directorios de la siguiente manera
 ### 1. SEMANA - PSEINT 
 ##### 1. Taller de variables e imprensión
 ##### 2. Taller de condicionales
@@ -9,9 +9,9 @@
 ##### 2. Taller de funciones
 ### 4. SEMANA - TALLERES CON JAVA
 ##### 1. Taller de variables e imprensión con java
-##### 1. Taller de condicionales con java
-##### 1. Taller de ciclos con java
-##### 1. Taller de arreglo con java
+##### 2. Taller de condicionales con java
+##### 3. Taller de ciclos con java
+##### 4. Taller de arreglo con java
 ### 5. SEMANA - HTML
 ##### 1. Taller de HTML
 ##### 2. Taller de CSS
