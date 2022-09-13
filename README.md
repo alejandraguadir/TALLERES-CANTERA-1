@@ -1,4 +1,4 @@
-## Repositorio de la solución de talleres Cantera 1
+## Repositorio solución de talleres Cantera 1
 ##### Los talleres se encuentran organizados en los respectivos directorios de la siguiente manera
 ### 1. SEMANA - PSEINT 
 ##### 1. Taller de variables e imprensión
